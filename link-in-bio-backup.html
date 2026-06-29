@@ -319,13 +319,13 @@
   .freebie-card {
     background: #fff;
     border-radius: 3px;
-    border: 1.5px solid rgba(151,103,70,0.12);
+    border: 1.5px solid rgba(44,24,16,0.1);
     transition: all 0.2s;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
-    min-width: 160px;
+    width: 220px;
     flex-shrink: 0;
     overflow: hidden;
   }
@@ -338,8 +338,8 @@
 
   .freebie-image {
     width: 100%;
-    height: 140px;
-    background: rgba(151,103,70,0.08);
+    height: 180px;
+    background: #F5F3F0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,10 +355,10 @@
   }
 
   .freebie-content {
-    padding: 16px;
+    padding: 18px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     flex: 1;
   }
 
@@ -397,11 +397,8 @@
 
   .freebie-cta:hover { opacity: 0.85; }
 
-  @media (min-width: 768px) {
-    .freebie-image { height: 200px; }
-    .freebie-card { min-width: 220px; }
-    .freebie-card h3 { font-size: 17px; }
-    .freebie-card p { font-size: 13px; }
+  @media (max-width: 600px) {
+    .freebie-card { width: 190px; }
   }
 
   /* ── Reviews Carousel ── */
@@ -491,36 +488,50 @@
   }
 
   .review-card {
-    background: linear-gradient(135deg, rgba(241,124,28,0.08) 0%, rgba(84,154,148,0.06) 100%);
-    border: 1.5px solid rgba(151,103,70,0.15);
+    background: #F5F3F0;
+    border: 1.5px solid rgba(44,24,16,0.08);
     border-radius: 3px;
-    padding: 16px;
-    min-width: 160px;
+    padding: 28px 24px;
+    width: 320px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
   }
 
-  @media (min-width: 768px) {
-    .review-card { min-width: 220px; padding: 20px; }
+  @media (max-width: 600px) {
+    .review-card { width: 270px; }
   }
 
   .review-text {
-    font-family: 'Lato', sans-serif;
-    font-size: 15px;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
     color: var(--text-dark);
     line-height: 1.7;
     font-style: italic;
+    flex: 1;
   }
 
   .review-author {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .review-author .name {
     font-family: 'Lato', sans-serif;
     font-size: 12px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-weight: 700;
     color: var(--orange-primary);
+  }
+
+  .review-author .role {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    color: var(--slate);
+    letter-spacing: 0.06em;
   }
 
   @media (max-width: 600px) {
@@ -764,28 +775,46 @@
       <div class="reviews-carousel" id="reviewsSlider">
         <div class="review-card">
           <p class="review-text">"Zahara is amazing! She is enthusiastic and full of creative ideas for social media and email marketing."</p>
-          <div class="review-author">Wellness Retreat</div>
+          <div class="review-author">
+            <span class="name">Client</span>
+            <span class="role">Wellness Retreat</span>
+          </div>
         </div>
         <div class="review-card">
           <p class="review-text">"Zahara is very good at communication, she is very quick to respond to any questions and the quality of work is awesome. Thank you."</p>
-          <div class="review-author">Cosmetic Injectables Clinic</div>
+          <div class="review-author">
+            <span class="name">Client</span>
+            <span class="role">Cosmetic Injectables Clinic</span>
+          </div>
         </div>
         <div class="review-card">
           <p class="review-text">"omg girl ur a breathe of fresh air... ur the best...this is a very good observation LOVE YOUR WORK!!"</p>
-          <div class="review-author">Ecommerce Brand</div>
+          <div class="review-author">
+            <span class="name">Client</span>
+            <span class="role">Ecommerce Brand</span>
+          </div>
         </div>
         <!-- Duplicates for seamless loop -->
         <div class="review-card">
           <p class="review-text">"Zahara is amazing! She is enthusiastic and full of creative ideas for social media and email marketing."</p>
-          <div class="review-author">Wellness Retreat</div>
+          <div class="review-author">
+            <span class="name">Client</span>
+            <span class="role">Wellness Retreat</span>
+          </div>
         </div>
         <div class="review-card">
           <p class="review-text">"Zahara is very good at communication, she is very quick to respond to any questions and the quality of work is awesome. Thank you."</p>
-          <div class="review-author">Cosmetic Injectables Clinic</div>
+          <div class="review-author">
+            <span class="name">Client</span>
+            <span class="role">Cosmetic Injectables Clinic</span>
+          </div>
         </div>
         <div class="review-card">
           <p class="review-text">"omg girl ur a breathe of fresh air... ur the best...this is a very good observation LOVE YOUR WORK!!"</p>
-          <div class="review-author">Ecommerce Brand</div>
+          <div class="review-author">
+            <span class="name">Client</span>
+            <span class="role">Ecommerce Brand</span>
+          </div>
         </div>
       </div>
     </div>
